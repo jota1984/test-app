@@ -1,0 +1,35 @@
+div { 
+  background-color: gray;
+  border: 2px solid black; 
+  margin-top: 20px;
+}
+
+h2 { 
+  text-align: center; 
+  margin: 10px 0px  
+}
+
+div.heading { 
+  margin-top: -2px; 
+  margin-right: -2px; 
+  margin-bottom: 5px; 
+  float: right; 
+  width: 120px;
+}
+
+div#chicken { 
+  background-color: maroon; 
+} 
+
+div#beef { 
+  background-color: indianred; 
+} 
+
+div#sushi { 
+  background-color: moccasin; 
+} 
+
+p { 
+  clear: both;
+}
+
