@@ -135,10 +135,19 @@
   box-sizing: border-box;
 }
 
-div { 
+.section { 
   background-color: gray;
-  border: 2px solid black; 
+  border: 1px solid black; 
   margin-top: 20px;
+}
+
+.heading { 
+  border: 1px solid black;
+  margin-top: -1px; 
+  margin-right: -1px; 
+  margin-bottom: 5px; 
+  float: right; 
+  width: 120px;
 }
 
 h2 { 
@@ -146,13 +155,6 @@ h2 {
   margin: 10px 0px  
 }
 
-div.heading { 
-  margin-top: -2px; 
-  margin-right: -2px; 
-  margin-bottom: 5px; 
-  float: right; 
-  width: 120px;
-}
 
 div#chicken { 
   background-color: maroon; 
