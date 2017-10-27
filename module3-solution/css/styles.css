@@ -9,6 +9,9 @@ h1 {
 #main-content h2 { 
   margin-bottom: 20px;
 }
+#main-content a { 
+  text-align: right;
+}
 
 #mobile-menu { 
   text-align: center;
@@ -21,9 +24,15 @@ h1 {
 #mobile-menu li:last-child { 
   border-bottom: 0;
 }
+
 #mobile-menu ul { 
   margin-bottom: 0;
   margin-top: 0;
   background-color: #ddd;
 }
+
+p.back-button { 
+  text-align: right; 
+}
+
    
