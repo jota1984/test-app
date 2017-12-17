@@ -39,10 +39,7 @@
     .state('menuItems', {
       url: '/categories/{catId}',
       templateUrl: 'src/templates/menu-items.template.html',
-      controller: ['$scope','menu_data', function ($scope,menu_data){ 
-        $scope.items = menu_data.menu_items;
-        $scope.category_name = menu_data.category.name;
-      }] ,
+      controller: 'MenuItemsController as menuItemsCtrl',
       params: {
         catId: null
       },
