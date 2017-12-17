@@ -23,9 +23,7 @@
     .state('categories', {
       url: '/categories',
       templateUrl: 'src/templates/categories.template.html',
-      controller:['$scope','categories', function ($scope, categories) { 
-        $scope.categories = categories; 
-      }],
+      controller: 'CategoriesController as catCtrl',
       resolve: {
         categories: ['MenuDataService', function (MenuDataService) {
           return MenuDataService.getAllCategories()
