@@ -2,7 +2,9 @@
 
 <ul>
   <li ng-repeat="item in $ctrl.list">
-    {{item.name}}
+    <button class="btn btn-primary" ui-sref="menuItems({catId:item.short_name})" >
+      {{item.name}}
+    </button>
   </li>
 </ul>
 
