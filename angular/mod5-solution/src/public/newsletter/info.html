@@ -1,4 +1,4 @@
-<div class="text-center">
+<div class="text-center user-info">
   <h1 ng-if="!infoCtrl.registered()">Not Signed Up Yet. Sign Up Now!</h1> 
 
   <div ng-if="infoCtrl.registered()"> 
@@ -16,7 +16,14 @@
       Phone: {{infoCtrl.user.phone}}
     </div>
     <div>
-      Favorite Dish: {{infoCtrl.user.dish}}
+      Favorite Dish Name:  {{infoCtrl.user.dish.name}} 
+    </div>
+    <div>
+      Favorite Dish Description: {{infoCtrl.user.dish.description}} 
+    </div>
+    <div>
+      Favorite Dish Image: 
+      <img class="img-responsive" width="250" height="150" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.user.dish.short_name}}.jpg" > 
     </div>
   
   </div>

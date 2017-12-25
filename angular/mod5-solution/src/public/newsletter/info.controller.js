@@ -4,11 +4,12 @@
 angular.module('public')
 .controller('NewsletterInfoController', NewsletterInfoController);
 
-NewsletterInfoController.$inject = [ 'RegistrationService' ]; 
-function NewsletterInfoController(RegistrationService) {
+NewsletterInfoController.$inject = [ 'RegistrationService', 'ApiPath' ]; 
+function NewsletterInfoController(RegistrationService, ApiPath) {
   var infoCtrl = this;
 
   infoCtrl.user = RegistrationService.getUser();
+  infoCtrl.basePath = ApiPath;
 
 
   infoCtrl.registered = function () { 
