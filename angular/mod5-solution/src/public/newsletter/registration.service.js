@@ -9,12 +9,13 @@ function RegistrationService() {
 
   regService.registered = false; 
 
-  regService.registerUser = function(firstName,lastName,email,phone) {
+  regService.registerUser = function(firstName,lastName,email,phone,dish) {
     regService.user = {
       firstName: firstName,
       lastName: lastName,
       email: email,
-      phone: phone
+      phone: phone,
+      dish: dish
     };
     regService.registered = true; 
   }

@@ -12,7 +12,8 @@ function NewsletterSignupController(RegistrationService) {
     RegistrationService.registerUser( signupCtrl.firstName,
         signupCtrl.lastName,
         signupCtrl.email,
-        signupCtrl.phone);
+        signupCtrl.phone,
+        signupCtrl.dish);
   }
 }
 

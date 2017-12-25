@@ -49,6 +49,11 @@
         </span>
       </div>
       <div class="form-group">
+        <label>Favorite Dish</label>
+        <input name="dish" class="form-control" type="text" ng-model="signupCtrl.dish"
+        required>
+      </div>
+      <div class="form-group">
         <button class="btn btn-primary" ng-click="signupCtrl.signup()" ng-disabled="signupForm.$invalid">Sign Up</button>
       </div>
     </form>
