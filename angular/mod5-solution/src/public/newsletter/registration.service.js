@@ -4,20 +4,24 @@
 angular.module('public')
 .service('RegistrationService', RegistrationService);
 
-function RegistrationService() {
+RegistrationService.$inject = [ 'MenuService' ]; 
+function RegistrationService(MenuService) {
   var regService = this;
 
   regService.registered = false; 
 
   regService.registerUser = function(firstName,lastName,email,phone,dish) {
-    regService.user = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      phone: phone,
-      dish: dish
-    };
-    regService.registered = true; 
+    return MenuService.getMenuItem(dish).then( function (item) {
+      regService.user = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        dish: item 
+      };
+      regService.registered = true; 
+      return item; 
+    });
   }
 
   regService.isRegistered = function () { 

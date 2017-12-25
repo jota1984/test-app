@@ -13,7 +13,11 @@ function NewsletterSignupController(RegistrationService) {
         signupCtrl.lastName,
         signupCtrl.email,
         signupCtrl.phone,
-        signupCtrl.dish);
+        signupCtrl.dish).then(function (item){
+          signupCtrl.status = "Your Information has been saved"; 
+        }).catch( function () { 
+          signupCtrl.status = "No such menu number exists"; 
+        });
   }
 }
 

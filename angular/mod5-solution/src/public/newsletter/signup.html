@@ -56,6 +56,9 @@
       <div class="form-group">
         <button class="btn btn-primary" ng-click="signupCtrl.signup()" ng-disabled="signupForm.$invalid">Sign Up</button>
       </div>
+      <span>
+        {{signupCtrl.status}}
+      </span>
     </form>
   </div>
   <div ng-if="loginCtrl.error" class="login-error text-center">
