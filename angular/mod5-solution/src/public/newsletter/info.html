@@ -1,3 +1,20 @@
 <div class="text-center">
   <h1 ng-if="!infoCtrl.registered()">Not Signed Up Yet. Sign Up Now!</h1> 
+
+  <div ng-if="infoCtrl.registered()"> 
+    <h1>Registration Information</h1>
+    <div>
+      First Name: {{infoCtrl.user.firstName}}
+    </div>
+    <div>
+      Last Name: {{infoCtrl.user.lastName}}
+    </div>
+    <div>
+      Email: {{infoCtrl.user.email}}
+    </div>
+    <div>
+      Phone: {{infoCtrl.user.phone}}
+    </div>
+  
+  </div>
 </div>
