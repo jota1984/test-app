@@ -4,12 +4,13 @@
 angular.module('public')
 .controller('NewsletterInfoController', NewsletterInfoController);
 
-function NewsletterInfoController() {
+NewsletterInfoController.$inject = [ 'RegistrationService' ]; 
+function NewsletterInfoController(RegistrationService) {
   var infoCtrl = this;
 
 
   infoCtrl.registered = function () { 
-    return false;
+    return RegistrationService.isRegistered(); 
   }
 }
 
